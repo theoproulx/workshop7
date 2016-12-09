@@ -8,44 +8,44 @@ var initialData = {
   "users": {
     // This user has id "1".
     "1": {
-      "_id": new ObjectID(000000000000000000000001),
+      "_id": new ObjectID("000000000000000000000001"),
       "fullName": "Someone",
-      "feed": new ObjectID(000000000000000000000001)
+      "feed": new ObjectID("000000000000000000000001")
     },
     "2": {
-      "_id": new ObjectID(000000000000000000000002),
+      "_id": new ObjectID("000000000000000000000002"),
       "fullName": "Someone Else",
-      "feed": new ObjectID(000000000000000000000002)
+      "feed": new ObjectID("000000000000000000000002")
     },
     "3": {
-      "_id": new ObjectID(000000000000000000000003),
+      "_id": new ObjectID("000000000000000000000003"),
       "fullName": "Another Person",
-      "feed": new ObjectID(000000000000000000000003)
+      "feed": new ObjectID("000000000000000000000003")
     },
     // This is "you"!
     "4": {
-      "_id": new ObjectID(000000000000000000000004),
+      "_id": new ObjectID("000000000000000000000004"),
       "fullName": "John Vilk",
       // ID of your feed.
-      "feed": new ObjectID(000000000000000000000004)
+      "feed": new ObjectID("000000000000000000000004")
     }
   },
   // The 'feedItems' collection. Contains all of the feed items on our Facebook
   // system.
   "feedItems": {
     "1": {
-      "_id": new ObjectID(000000000000000000000001),
+      "_id": new ObjectID("000000000000000000000001"),
       // A list of users that liked the post. Here, "Someone Else" and "Another Person"
       // liked this particular post.
       "likeCounter": [
-        new ObjectID(000000000000000000000002), new ObjectID(000000000000000000000003)
+        new ObjectID("000000000000000000000002"), new ObjectID("000000000000000000000003")
       ],
       // The type and contents of this feed item. This item happens to be a status
       // update.
       "type": "statusUpdate",
       "contents": {
         // ID of the user that posted the status update.
-        "author": new ObjectID(000000000000000000000001),
+        "author": new ObjectID("000000000000000000000001"),
         // 01/24/16 3:48PM EST, converted to Unix Time
         // (# of milliseconds since Jan 1 1970 UTC)
         // https://en.wikipedia.org/wiki/Unix_time
@@ -57,7 +57,7 @@ var initialData = {
       "comments": [
         {
           // The author of the comment.
-          "author": new ObjectID(000000000000000000000002),
+          "author": new ObjectID("000000000000000000000002"),
           // The contents of the comment.
           "contents": "hope everything is ok!",
           // The date the comment was posted.
@@ -66,7 +66,7 @@ var initialData = {
           "likeCounter": []
         },
         {
-          "author": new ObjectID(000000000000000000000003),
+          "author": new ObjectID("000000000000000000000003"),
           "contents": "sending hugs your way",
           "postDate": 1453690800000,
           "likeCounter": []
@@ -74,11 +74,11 @@ var initialData = {
       ]
     },
     "2": {
-      "_id": new ObjectID(000000000000000000000002),
+      "_id": new ObjectID("000000000000000000000002"),
       "likeCounter": [],
       "type": "statusUpdate",
       "contents": {
-        "author": new ObjectID(000000000000000000000004),
+        "author": new ObjectID("000000000000000000000004"),
         "postDate": 1458231460117,
         "location": "Philadelphia, PA",
         "contents": "You can now edit and delete status updates!\nGo ahead and click the caret in the corner of the post."
@@ -89,20 +89,20 @@ var initialData = {
   // "feeds" collection. Feeds for each FB user.
   "feeds": {
     "4": {
-      "_id": new ObjectID(000000000000000000000004),
+      "_id": new ObjectID("000000000000000000000004"),
       // Listing of FeedItems in the feed.
-      "contents": [new ObjectID(000000000000000000000002), new ObjectID(000000000000000000000001)]
+      "contents": [new ObjectID("000000000000000000000002"), new ObjectID("000000000000000000000001")]
     },
     "3": {
-      "_id": new ObjectID(000000000000000000000003),
+      "_id": new ObjectID("000000000000000000000003"),
       "contents": []
     },
     "2": {
-      "_id": new ObjectID(000000000000000000000002),
+      "_id": new ObjectID("000000000000000000000002"),
       "contents": []
     },
     "1": {
-      "_id": new ObjectID(000000000000000000000001),
+      "_id": new ObjectID("000000000000000000000001"),
       "contents": []
     }
   }
